@@ -52,10 +52,15 @@ for %%F in ("%source%\*.*") do (
     set "ext=%%~xF"
     set "ext=!ext:~1!"
     
-    for %%I in (%INSTALLER_EXT%) do (
-        if /i "!ext!"=="%%I" (
-            echo Moving "!filename!" to Installer folder
-            move "!fullpath!" "%installer_dest%\"
+    rem Skip moving the script itself
+    if /i "!filename!"=="%~nx0" (
+        echo Skipping script file: !filename!
+    ) else (
+        for %%I in (%INSTALLER_EXT%) do (
+            if /i "!ext!"=="%%I" (
+                echo Moving "!filename!" to Installer folder
+                move "!fullpath!" "%installer_dest%\"
+            )
         )
     )
 )
@@ -67,10 +72,15 @@ for %%F in ("%source%\*.*") do (
     set "ext=%%~xF"
     set "ext=!ext:~1!"
     
-    for %%P in (%PDF_EXT%) do (
-        if /i "!ext!"=="%%P" (
-            echo Moving "!filename!" to PDF folder
-            move "!fullpath!" "%pdf_dest%\"
+    rem Skip moving the script itself
+    if /i "!filename!"=="%~nx0" (
+        echo Skipping script file: !filename!
+    ) else (
+        for %%P in (%PDF_EXT%) do (
+            if /i "!ext!"=="%%P" (
+                echo Moving "!filename!" to PDF folder
+                move "!fullpath!" "%pdf_dest%\"
+            )
         )
     )
 )
@@ -82,10 +92,15 @@ for %%F in ("%source%\*.*") do (
     set "ext=%%~xF"
     set "ext=!ext:~1!"
     
-    for %%V in (%VIDEO_EXT%) do (
-        if /i "!ext!"=="%%V" (
-            echo Moving "!filename!" to Video folder
-            move "!fullpath!" "%video_dest%\"
+    rem Skip moving the script itself
+    if /i "!filename!"=="%~nx0" (
+        echo Skipping script file: !filename!
+    ) else (
+        for %%V in (%VIDEO_EXT%) do (
+            if /i "!ext!"=="%%V" (
+                echo Moving "!filename!" to Video folder
+                move "!fullpath!" "%video_dest%\"
+            )
         )
     )
 )
@@ -97,10 +112,15 @@ for %%F in ("%source%\*.*") do (
     set "ext=%%~xF"
     set "ext=!ext:~1!"
     
-    for %%I in (%IMAGE_EXT%) do (
-        if /i "!ext!"=="%%I" (
-            echo Moving "!filename!" to Images folder
-            move "!fullpath!" "%image_dest%\"
+    rem Skip moving the script itself
+    if /i "!filename!"=="%~nx0" (
+        echo Skipping script file: !filename!
+    ) else (
+        for %%I in (%IMAGE_EXT%) do (
+            if /i "!ext!"=="%%I" (
+                echo Moving "!filename!" to Images folder
+                move "!fullpath!" "%image_dest%\"
+            )
         )
     )
 )
@@ -112,10 +132,15 @@ for %%F in ("%source%\*.*") do (
     set "ext=%%~xF"
     set "ext=!ext:~1!"
     
-    for %%A in (%AUDIO_EXT%) do (
-        if /i "!ext!"=="%%A" (
-            echo Moving "!filename!" to Audio folder
-            move "!fullpath!" "%audio_dest%\"
+    rem Skip moving the script itself
+    if /i "!filename!"=="%~nx0" (
+        echo Skipping script file: !filename!
+    ) else (
+        for %%A in (%AUDIO_EXT%) do (
+            if /i "!ext!"=="%%A" (
+                echo Moving "!filename!" to Audio folder
+                move "!fullpath!" "%audio_dest%\"
+            )
         )
     )
 )
@@ -127,10 +152,15 @@ for %%F in ("%source%\*.*") do (
     set "ext=%%~xF"
     set "ext=!ext:~1!"
     
-    for %%P in (%PROGRAMMING_EXT%) do (
-        if /i "!ext!"=="%%P" (
-            echo Moving "!filename!" to Programming folder
-            move "!fullpath!" "%programming_dest%\"
+    rem Skip moving the script itself
+    if /i "!filename!"=="%~nx0" (
+        echo Skipping script file: !filename!
+    ) else (
+        for %%P in (%PROGRAMMING_EXT%) do (
+            if /i "!ext!"=="%%P" (
+                echo Moving "!filename!" to Programming folder
+                move "!fullpath!" "%programming_dest%\"
+            )
         )
     )
 )
@@ -142,10 +172,15 @@ for %%F in ("%source%\*.*") do (
     set "ext=%%~xF"
     set "ext=!ext:~1!"
     
-    for %%Z in (%ARCHIVE_EXT%) do (
-        if /i "!ext!"=="%%Z" (
-            echo Moving "!filename!" to Archives folder
-            move "!fullpath!" "%archive_dest%\"
+    rem Skip moving the script itself
+    if /i "!filename!"=="%~nx0" (
+        echo Skipping script file: !filename!
+    ) else (
+        for %%Z in (%ARCHIVE_EXT%) do (
+            if /i "!ext!"=="%%Z" (
+                echo Moving "!filename!" to Archives folder
+                move "!fullpath!" "%archive_dest%\"
+            )
         )
     )
 )

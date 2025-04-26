@@ -8,6 +8,18 @@ A simple, customizable Windows batch script to automatically organize your Downl
 - **No Installation Needed**: Just run the batch file—no dependencies or setup required.
 - **Safe**: Creates destination folders if they don't exist; only moves files, does not delete.
 
+## Screenshots
+
+### Before: The Past
+
+![A cluttered Downloads folder before organization.](the%20past.png)
+*The Downloads folder before running Fast Download Organizer.*
+
+### After: The Future
+
+![A perfectly organized Downloads folder with subfolders for Audio, Work, Archives, Programming, Images, Installer, PDF, and Video.](the%20future.png)
+*The Downloads folder after running Fast Download Organizer—neat, categorized, and peaceful!*
+
 ## How It Works
 - The script scans `%USERPROFILE%\Downloads` for files.
 - Files are moved to subfolders based on their extension:
